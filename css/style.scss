@@ -10,8 +10,8 @@ html,
 body {
     margin: 0;
     height: 100%;
-    font-family: "Roboto", sans-serif;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
 nav {
@@ -22,10 +22,13 @@ nav {
     border-bottom: 1px solid #c032f0;
 }
 main {
+    background-image: url("../img/bg-light.png");
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     .secContainer {
+        background-color: white;
         border: 1px solid #c032f0;
         width: 80%;
         h3 {
@@ -34,7 +37,7 @@ main {
         .bar {
             background-color: #c6fa74;
             border-bottom: 1px solid #c032f0;
-            padding: 1ex;
+            padding: 2ex;
         }
         .movies {
             display: flex;
@@ -79,7 +82,16 @@ main {
             }
             #cardL {
                 @include movieCardTemplate("../img/potter4.jpeg");
-            } 
+            }
+        }
+        #secB,
+        #secC {
+            .bar {
+                border-top: #c032f0 solid 1px;
+                border-bottom: #c032f0 solid 1px;
+            }
+            .movies {
+            }
         }
     }
 }

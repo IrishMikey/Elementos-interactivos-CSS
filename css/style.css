@@ -3,8 +3,8 @@ html,
 body {
   margin: 0;
   height: 100%;
-  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 nav {
@@ -16,12 +16,15 @@ nav {
 }
 
 main {
+  background-image: url("../img/bg-light.png");
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 main .secContainer {
+  background-color: white;
   border: 1px solid #c032f0;
   width: 80%;
 }
@@ -33,7 +36,7 @@ main .secContainer h3 {
 main .secContainer .bar {
   background-color: #c6fa74;
   border-bottom: 1px solid #c032f0;
-  padding: 1ex;
+  padding: 2ex;
 }
 
 main .secContainer .movies {
@@ -140,4 +143,10 @@ main .secContainer .movies #cardL {
   background: url("../img/potter4.jpeg") no-repeat;
   background-size: contain;
   padding-right: 10px;
+}
+
+main .secContainer #secB .bar,
+main .secContainer #secC .bar {
+  border-top: #c032f0 solid 1px;
+  border-bottom: #c032f0 solid 1px;
 }
