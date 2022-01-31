@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@mixin movieCardTemplate($url) {
+    height: 280px;
+    width: 200px;
+    background: url($url) no-repeat;
+    background-size: contain;
+    padding-right: 10px;
+}
+html,
+body {
+    margin: 0;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid #c032f0;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .secContainer {
+        border: 1px solid #c032f0;
+        width: 80%;
+        h3 {
+            margin: 0;
+        }
+        .bar {
+            background-color: #c6fa74;
+            border-bottom: 1px solid #c032f0;
+            padding: 1ex;
+        }
+        .movies {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            padding: 1rem 1.5rem 3rem;
+            #cardA {
+                @include movieCardTemplate("../img/peli1.jpeg");
+            }
+            #cardB {
+                @include movieCardTemplate("../img/peli2.jpeg");
+            }
+            #cardC {
+                @include movieCardTemplate("../img/peli3.jpeg");
+            }
+            #cardD {
+                @include movieCardTemplate("../img/peli4.jpeg");
+            }
+            /*Section 2*/
+            #cardE {
+                @include movieCardTemplate("../img/anima1.jpeg");
+            }
+            #cardF {
+                @include movieCardTemplate("../img/anima2.jpeg");
+            }
+            #cardG {
+                @include movieCardTemplate("../img/anima3.jpeg");
+            }
+            #cardH {
+                @include movieCardTemplate("../img/anima4.jpeg");
+            }
+            /*Section 3*/
+            #cardI {
+                @include movieCardTemplate("../img/potter1.jpeg");
+            }
+            #cardJ {
+                @include movieCardTemplate("../img/potter2.jpeg");
+            }
+            #cardK {
+                @include movieCardTemplate("../img/potter3.jpeg");
+            }
+            #cardL {
+                @include movieCardTemplate("../img/potter4.jpeg");
+            } 
+        }
+    }
+}

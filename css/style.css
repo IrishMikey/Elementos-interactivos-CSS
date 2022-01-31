@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid #c032f0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .secContainer {
+  border: 1px solid #c032f0;
+  width: 80%;
+}
+
+main .secContainer h3 {
+  margin: 0;
+}
+
+main .secContainer .bar {
+  background-color: #c6fa74;
+  border-bottom: 1px solid #c032f0;
+  padding: 1ex;
+}
+
+main .secContainer .movies {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem 1.5rem 3rem;
+  /*Section 2*/
+  /*Section 3*/
+}
+
+main .secContainer .movies #cardA {
+  height: 280px;
+  width: 200px;
+  background: url("../img/peli1.jpeg") no-repeat;
+  background-size: contain;
+  padding-right: 10px;
+}
+
+main .secContainer .movies #cardB {
+  height: 280px;
+  width: 200px;
+  background: url("../img/peli2.jpeg") no-repeat;
+  background-size: contain;
+  padding-right: 10px;
+}
+
+main .secContainer .movies #cardC {
+  height: 280px;
+  width: 200px;
+  background: url("../img/peli3.jpeg") no-repeat;
+  background-size: contain;
+  padding-right: 10px;
+}
+
+main .secContainer .movies #cardD {
+  height: 280px;
+  width: 200px;
+  background: url("../img/peli4.jpeg") no-repeat;
+  background-size: contain;
+  padding-right: 10px;
+}
+
+main .secContainer .movies #cardE {
+  height: 280px;
+  width: 200px;
+  background: url("../img/anima1.jpeg") no-repeat;
+  background-size: contain;
+  padding-right: 10px;
+}
+
+main .secContainer .movies #cardF {
+  height: 280px;
+  width: 200px;
+  background: url("../img/anima2.jpeg") no-repeat;
+  background-size: contain;
+  padding-right: 10px;
+}
+
+main .secContainer .movies #cardG {
+  height: 280px;
+  width: 200px;
+  background: url("../img/anima3.jpeg") no-repeat;
+  background-size: contain;
+  padding-right: 10px;
+}
+
+main .secContainer .movies #cardH {
+  height: 280px;
+  width: 200px;
+  background: url("../img/anima4.jpeg") no-repeat;
+  background-size: contain;
+  padding-right: 10px;
+}
+
+main .secContainer .movies #cardI {
+  height: 280px;
+  width: 200px;
+  background: url("../img/potter1.jpeg") no-repeat;
+  background-size: contain;
+  padding-right: 10px;
+}
+
+main .secContainer .movies #cardJ {
+  height: 280px;
+  width: 200px;
+  background: url("../img/potter2.jpeg") no-repeat;
+  background-size: contain;
+  padding-right: 10px;
+}
+
+main .secContainer .movies #cardK {
+  height: 280px;
+  width: 200px;
+  background: url("../img/potter3.jpeg") no-repeat;
+  background-size: contain;
+  padding-right: 10px;
+}
+
+main .secContainer .movies #cardL {
+  height: 280px;
+  width: 200px;
+  background: url("../img/potter4.jpeg") no-repeat;
+  background-size: contain;
+  padding-right: 10px;
+}
