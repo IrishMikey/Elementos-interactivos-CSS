@@ -1,13 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 html,
 body {
-  margin: 0;
   height: 100%;
+  margin: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
 
-nav {
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -17,39 +22,90 @@ nav {
 
 main {
   background-image: url("../img/bg-light.png");
+  flex: 1 1 auto;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+}
+
+main aside {
   height: 100%;
+  position: absolute;
+  background-color: white;
+  width: 200px;
+}
+
+main aside ul {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 20pt;
+  padding: 1rem 1rem 1rem 0rem;
+}
+
+main aside ul li {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+main aside ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+main aside ul li a:hover {
+  color: #c032f0;
+}
+
+main .startContainer {
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 
-main .secContainer {
-  background-color: white;
-  border: 1px solid #c032f0;
-  width: 80%;
+main .startContainer div {
+  margin-bottom: 1rem;
 }
 
-main .secContainer h3 {
+main .startContainer #enterBtn {
+  height: 3rem;
+  width: 8rem;
+  font-size: larger;
+  border-radius: 5px;
+}
+
+main .movieContainer {
+  display: none;
+  background-color: white;
+  border: 1px solid #c032f0;
+  width: 75%;
+}
+
+main .movieContainer h2 {
   margin: 0;
 }
 
-main .secContainer .bar {
+main .movieContainer .bar {
   background-color: #c6fa74;
   border-bottom: 1px solid #c032f0;
   padding: 2ex;
 }
 
-main .secContainer .movies {
-  display: flex;
+main .movieContainer .movies {
+  display: none;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  padding: 1rem 1.5rem 3rem;
+  padding: 1rem;
   /*Section 2*/
   /*Section 3*/
 }
 
-main .secContainer .movies #cardA {
+main .movieContainer .movies #cardA {
   height: 280px;
   width: 200px;
   background: url("../img/peli1.jpeg") no-repeat;
@@ -57,7 +113,7 @@ main .secContainer .movies #cardA {
   padding-right: 10px;
 }
 
-main .secContainer .movies #cardB {
+main .movieContainer .movies #cardB {
   height: 280px;
   width: 200px;
   background: url("../img/peli2.jpeg") no-repeat;
@@ -65,7 +121,7 @@ main .secContainer .movies #cardB {
   padding-right: 10px;
 }
 
-main .secContainer .movies #cardC {
+main .movieContainer .movies #cardC {
   height: 280px;
   width: 200px;
   background: url("../img/peli3.jpeg") no-repeat;
@@ -73,7 +129,7 @@ main .secContainer .movies #cardC {
   padding-right: 10px;
 }
 
-main .secContainer .movies #cardD {
+main .movieContainer .movies #cardD {
   height: 280px;
   width: 200px;
   background: url("../img/peli4.jpeg") no-repeat;
@@ -81,7 +137,7 @@ main .secContainer .movies #cardD {
   padding-right: 10px;
 }
 
-main .secContainer .movies #cardE {
+main .movieContainer .movies #cardE {
   height: 280px;
   width: 200px;
   background: url("../img/anima1.jpeg") no-repeat;
@@ -89,7 +145,7 @@ main .secContainer .movies #cardE {
   padding-right: 10px;
 }
 
-main .secContainer .movies #cardF {
+main .movieContainer .movies #cardF {
   height: 280px;
   width: 200px;
   background: url("../img/anima2.jpeg") no-repeat;
@@ -97,7 +153,7 @@ main .secContainer .movies #cardF {
   padding-right: 10px;
 }
 
-main .secContainer .movies #cardG {
+main .movieContainer .movies #cardG {
   height: 280px;
   width: 200px;
   background: url("../img/anima3.jpeg") no-repeat;
@@ -105,7 +161,7 @@ main .secContainer .movies #cardG {
   padding-right: 10px;
 }
 
-main .secContainer .movies #cardH {
+main .movieContainer .movies #cardH {
   height: 280px;
   width: 200px;
   background: url("../img/anima4.jpeg") no-repeat;
@@ -113,7 +169,7 @@ main .secContainer .movies #cardH {
   padding-right: 10px;
 }
 
-main .secContainer .movies #cardI {
+main .movieContainer .movies #cardI {
   height: 280px;
   width: 200px;
   background: url("../img/potter1.jpeg") no-repeat;
@@ -121,7 +177,7 @@ main .secContainer .movies #cardI {
   padding-right: 10px;
 }
 
-main .secContainer .movies #cardJ {
+main .movieContainer .movies #cardJ {
   height: 280px;
   width: 200px;
   background: url("../img/potter2.jpeg") no-repeat;
@@ -129,7 +185,7 @@ main .secContainer .movies #cardJ {
   padding-right: 10px;
 }
 
-main .secContainer .movies #cardK {
+main .movieContainer .movies #cardK {
   height: 280px;
   width: 200px;
   background: url("../img/potter3.jpeg") no-repeat;
@@ -137,7 +193,7 @@ main .secContainer .movies #cardK {
   padding-right: 10px;
 }
 
-main .secContainer .movies #cardL {
+main .movieContainer .movies #cardL {
   height: 280px;
   width: 200px;
   background: url("../img/potter4.jpeg") no-repeat;
@@ -145,8 +201,8 @@ main .secContainer .movies #cardL {
   padding-right: 10px;
 }
 
-main .secContainer #secB .bar,
-main .secContainer #secC .bar {
+main .movieContainer #secB .bar,
+main .movieContainer #secC .bar {
   border-top: #c032f0 solid 1px;
   border-bottom: #c032f0 solid 1px;
 }
