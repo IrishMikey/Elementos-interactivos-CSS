@@ -18,6 +18,10 @@
   background-color: white;
 }
 
+.bodyDark header #sliderContainer #slider {
+  background-color: #4D4DFF;
+}
+
 .bodyDark main {
   background-image: url("../img/bg-dark.png");
 }
@@ -304,7 +308,8 @@ main .movieContainer #secC .bar {
   animation: lightModeOn 0.3s forwards;
 }
 
-@keyframes darkModeOn {
+@keyframes darkModeOn
+01.22222222 {
   0% {
     transform: translateX(0%);
   }

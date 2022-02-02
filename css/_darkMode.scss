@@ -18,6 +18,9 @@
         }
         #sliderContainer {
             background-color: white;
+            #slider {
+                background-color: #{$primaryDark};
+            }
         }
     }
     main {
