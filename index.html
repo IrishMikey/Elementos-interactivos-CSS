@@ -1,78 +1,87 @@
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <header>
-      <div>
-          svg
+</head>
 
-      </div>
-      <h1>Interactive Website</h1>
-      <button class="darkBtn"></button>
+<body>
+    <header>
+        <div id="dMenu">
+            <svg width="50" height="50">
+                <rect width="50" height="10" fill="purple"> </rect>
+                <rect width="50" height="10" y="20" fill="purple"> </rect>
+                <rect width="50" height="10" y="40" fill="purple"> </rect>
+            </svg>
+
+        </div>
+        <h1>Interactive Website</h1>
+        <div id="sliderContainer">
+            <div id="slider"></div>
+        </div>
     </header>
     <main>
-      <aside>
-        <ul>
-          <li><a href="#">Enlace1</a></li>
-          <li><a href="#">Enlace2</a></li>
-          <li><a href="#">Enlace3</a></li>
-          <li><a href="#">Enlace4</a></li>
-          <li><a href="#">Enlace5</a></li>
-        </ul>
-      </aside>
-      <section class="startContainer">
-        <h2>¿Desa conocer las novedades del 7º arte?</h2>
-        <div>
-          <input type="checkbox" name="confirmar" id="confirmarCheck" /><label
-            for="confirmar"
-            >Sí a todo.</label
-          >
-        </div>
-        <input type="button" value="¡Adelante!" id="enterBtn" />
-      </section>
-      <section class="movieContainer">
-        <h2>Cartelera de cine</h2>
+        <aside>
+            <ul>
+                <li><a href="#">Enlace1</a></li>
+                <li><a href="#">Enlace2</a></li>
+                <li><a href="#">Enlace3</a></li>
+                <li><a href="#">Enlace4</a></li>
+                <li><a href="#">Enlace5</a></li>
+            </ul>
+        </aside>
+        <section class="startContainer">
+            <h2>¿Desa conocer las novedades del 7º arte?</h2>
+            <div>
+                <input type="checkbox" name="confirmar" id="confirmarCheck" />
+                <label for="confirmarCheck">Sí a
+                    todo.</label>
+            </div>
+            <input type="button" value="¡Adelante!" id="enterBtn" />
+        </section>
+        <section class="movieContainer">
+            <h2>Cartelera de cine</h2>
 
-        <section class="sec" id="secA">
-          <div class="bar">
-            <h2>Lo más popular</h2>
-          </div>
-          <div class="movies">
-            <div class="movieCard" id="cardA"></div>
-            <div class="movieCard" id="cardB"></div>
-            <div class="movieCard" id="cardC"></div>
-            <div class="movieCard" id="cardD"></div>
-          </div>
+            <section class="sec" id="secA">
+                <div class="bar">
+                    <h2>Lo más popular</h2>
+                </div>
+                <div class="movies">
+                    <div class="movieCard" id="cardA"></div>
+                    <div class="movieCard" id="cardB"></div>
+                    <div class="movieCard" id="cardC"></div>
+                    <div class="movieCard" id="cardD"></div>
+                </div>
+            </section>
+            <section class="sec" id="secB">
+                <div class="bar">
+                    <h2>Animacion</h2>
+                </div>
+                <div class="movies">
+                    <div class="movieCard" id="cardE"></div>
+                    <div class="movieCard" id="cardF"></div>
+                    <div class="movieCard" id="cardG"></div>
+                    <div class="movieCard" id="cardH"></div>
+                </div>
+            </section>
+            <section class="sec" id="secC">
+                <div class="bar">
+                    <h2>Sagas</h2>
+                </div>
+                <div class="movies">
+                    <div class="movieCard" id="cardI"></div>
+                    <div class="movieCard" id="cardJ"></div>
+                    <div class="movieCard" id="cardK"></div>
+                    <div class="movieCard" id="cardL"></div>
+                </div>
+            </section>
         </section>
-        <section class="sec" id="secB">
-          <div class="bar">
-            <h2>Animacion</h2>
-          </div>
-          <div class="movies">
-            <div class="movieCard" id="cardE"></div>
-            <div class="movieCard" id="cardF"></div>
-            <div class="movieCard" id="cardG"></div>
-            <div class="movieCard" id="cardH"></div>
-          </div>
-        </section>
-        <section class="sec" id="secC">
-          <div class="bar">
-            <h2>Sagas</h2>
-          </div>
-          <div class="movies">
-            <div class="movieCard" id="cardI"></div>
-            <div class="movieCard" id="cardJ"></div>
-            <div class="movieCard" id="cardK"></div>
-            <div class="movieCard" id="cardL"></div>
-          </div>
-        </section>
-      </section>
-      <section class="spinnerContainer"></section>
+        <section class="spinnerContainer"></section>
     </main>
-  </body>
+    <script src="./js/script.js"></script>
+</body>
+
 </html>

@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+$primary: "#c032f0";
+$tertiary: "#333333";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap");
 @mixin movieCardTemplate($url) {
     height: 280px;
     width: 200px;
@@ -23,7 +26,41 @@ header {
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
-    border-bottom: 1px solid #c032f0;
+    border-bottom: 1px solid #{$primary};
+    h1 {
+        font-weight: 900;
+    }
+    #dMenu {
+        margin-left: 1rem;
+        svg {
+            transform: scale(0.6);
+            position: relative;
+            top: 15px;
+            rect {
+                fill: $primary;
+            }
+        }
+    }
+    #sliderContainer {
+        margin-right: 1rem;
+        position: relative;
+        top: 30px;
+        width: 48px;
+        height: 24px;
+        background-color: #{$tertiary};
+        border-radius: 5px;
+        #slider {
+            position: relative;
+            margin-top: 1px;
+            margin-left: 1px;
+            height: 19px;
+            width: 18px;
+            background-color: #{$primary};
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: left  1s ease;
+        }
+    }
 }
 main {
     background-image: url("../img/bg-light.png");
@@ -36,6 +73,7 @@ main {
         position: absolute;
         background-color: white;
         width: 200px;
+        border: solid 1px #{$primary};
         ul {
             display: flex;
             flex-direction: column;
@@ -50,13 +88,13 @@ main {
                     text-decoration: none;
                     color: black;
                     &:hover {
-                        color: #c032f0;
+                        color: #{$primary};
                     }
                 }
             }
         }
     }
-    .startContainer {        
+    .startContainer {
         flex: 1 1 auto;
         width: 100%;
         display: flex;
@@ -73,18 +111,22 @@ main {
             font-size: larger;
             border-radius: 5px;
         }
+        label {
+            user-select: none;
+        }
     }
     .movieContainer {
         display: none;
         background-color: white;
-        border: 1px solid #c032f0;
+        border: 1px solid #{$primary};
         width: 75%;
         h2 {
             margin: 0;
+            font-weight: 900;
         }
         .bar {
             background-color: #c6fa74;
-            border-bottom: 1px solid #c032f0;
+            border-bottom: 1px solid #{$primary};
             padding: 2ex;
         }
         .movies {
@@ -135,11 +177,11 @@ main {
         #secB,
         #secC {
             .bar {
-                border-top: #c032f0 solid 1px;
-                border-bottom: #c032f0 solid 1px;
+                border-top: #{$primary} solid 1px;
+                border-bottom: #{$primary} solid 1px;
             }
-            .movies {
-            }
+            // .movies {
+            // }
         }
     }
 }
