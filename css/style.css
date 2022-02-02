@@ -160,10 +160,23 @@ main .startContainer #enterBtn {
   width: 8rem;
   font-size: larger;
   border-radius: 8px;
+  box-shadow: 0px 0px 7px 3px #c032f0;
 }
 
 main .startContainer #enterBtn:disabled {
   background-color: #FAF9F6;
+  box-shadow: 0px 0px;
+}
+
+main .startContainer #enterBtn:hover {
+  background-color: #c6fa74;
+  color: #c032f0;
+}
+
+main .startContainer #enterBtn:active {
+  background-color: #c6fa74;
+  color: #c032f0;
+  box-shadow: 0px 0px;
 }
 
 main .startContainer label {
@@ -308,8 +321,7 @@ main .movieContainer #secC .bar {
   animation: lightModeOn 0.3s forwards;
 }
 
-@keyframes darkModeOn
-01.22222222 {
+@keyframes darkModeOn {
   0% {
     transform: translateX(0%);
   }

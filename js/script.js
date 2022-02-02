@@ -40,14 +40,16 @@ chekBox.addEventListener("change", (e) => {
     }
     console.log(enterBtn);
 });
+
+
+// Open/Close side nav
 var aside = document.getElementsByTagName("aside")[0];
 
 var dMenu = document.getElementById("dMenu");
 dMenu.addEventListener("click", () => {
-    if (aside.classList.contains('closeMenu')) {
-        aside.setAttribute("class", 'openMenu');
-    } else
+    if (aside.classList.contains('openMenu')) {
         aside.setAttribute("class", 'closeMenu');
-
+    } else
+        aside.setAttribute("class", 'openMenu');
 });
 
