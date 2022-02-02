@@ -1,10 +1,48 @@
+@import url(./_colors.scss);
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap");
+.bodyDark {
+  background-color: #222222;
+  border-color: #4D4DFF;
+  color: #FFFFFF;
+}
+
+.bodyDark header {
+  border-color: #4D4DFF;
+}
+
+.bodyDark header #dMenu svg rect {
+  fill: #4D4DFF;
+}
+
+.bodyDark header #sliderContainer {
+  background-color: white;
+}
+
+.bodyDark main {
+  background-image: url("../img/bg-dark.png");
+}
+
+.bodyDark main aside {
+  background-color: #222222;
+  border-color: #4D4DFF;
+  color: #FFFFFF;
+}
+
+.bodyDark main aside ul a {
+  color: #FFFFFF;
+}
+
+.bodyDark main aside ul a:hover {
+  color: #4D4DFF;
+}
+
 html,
 body {
   height: 100%;
   margin: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  background-color: #FAF9F6;
 }
 
 body {
@@ -35,7 +73,7 @@ header #dMenu svg {
 }
 
 header #dMenu svg rect {
-  fill: "#c032f0";
+  fill: #c032f0;
 }
 
 header #sliderContainer {
@@ -44,8 +82,8 @@ header #sliderContainer {
   top: 30px;
   width: 48px;
   height: 24px;
-  background-color: #333333;
   border-radius: 5px;
+  background-color: #222222;
 }
 
 header #sliderContainer #slider {
@@ -53,11 +91,11 @@ header #sliderContainer #slider {
   margin-top: 1px;
   margin-left: 1px;
   height: 19px;
-  width: 18px;
+  width: 19px;
   background-color: #c032f0;
-  border: 1px solid white;
+  border: 1px solid #FAF9F6;
   border-radius: 5px;
-  transition: left  1s ease;
+  transition: all 1s ease;
 }
 
 main {
@@ -69,9 +107,10 @@ main {
 }
 
 main aside {
+  transform: translateX(-100%);
   height: 100%;
   position: absolute;
-  background-color: white;
+  background-color: #FAF9F6;
   width: 200px;
   border: solid 1px #c032f0;
 }
@@ -113,10 +152,14 @@ main .startContainer div {
 }
 
 main .startContainer #enterBtn {
-  height: 3rem;
+  height: 2.5rem;
   width: 8rem;
   font-size: larger;
-  border-radius: 5px;
+  border-radius: 8px;
+}
+
+main .startContainer #enterBtn:disabled {
+  background-color: #FAF9F6;
 }
 
 main .startContainer label {
@@ -125,7 +168,7 @@ main .startContainer label {
 
 main .movieContainer {
   display: none;
-  background-color: white;
+  background-color: #FAF9F6;
   border: 1px solid #c032f0;
   width: 75%;
 }
@@ -251,4 +294,56 @@ main .movieContainer #secB .bar,
 main .movieContainer #secC .bar {
   border-top: #c032f0 solid 1px;
   border-bottom: #c032f0 solid 1px;
+}
+
+.darkModeOn {
+  animation: darkModeOn 0.3s forwards;
+}
+
+.lightModeOn {
+  animation: lightModeOn 0.3s forwards;
+}
+
+@keyframes darkModeOn {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@keyframes lightModeOn {
+  0% {
+    transform: translateX(120%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.openMenu {
+  animation: openMenu 0.3s forwards;
+}
+
+.closeMenu {
+  animation: closeMenu 0.3s forwards;
+}
+
+@keyframes closeMenu {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes openMenu {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }

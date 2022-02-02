@@ -1,0 +1,37 @@
+@import url(./_colors.scss);
+
+@mixin darkDefaults {
+    background-color: #{$bgColorDark};
+    border-color: #{$primaryDark};
+    color: #{$colorTextDark};
+}
+.bodyDark {
+    @include darkDefaults;
+    header {
+        border-color: #{$primaryDark};
+        #dMenu {
+            svg {
+                rect {
+                    fill: #{$primaryDark};
+                }
+            }
+        }
+        #sliderContainer {
+            background-color: white;
+        }
+    }
+    main {
+        background-image: url("../img/bg-dark.png");
+        aside {
+            @include darkDefaults;
+            ul {
+                a {
+                    color: #{$colorTextDark};
+                    &:hover {
+                        color: #{$primaryDark};
+                    }
+                }
+            }
+        }
+    }
+}
