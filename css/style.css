@@ -145,7 +145,7 @@ main aside ul li a:hover {
 main .startContainer {
   flex: 1 1 auto;
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -183,11 +183,59 @@ main .startContainer label {
   user-select: none;
 }
 
-main .movieContainer {
+main .spinnerContainer {
+  flex: 1 1 auto;
+  width: 100%;
   display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+main .spinnerContainer .loader {
+  margin-top: 4rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #222222;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+main .spinnerContainer .loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-left: 4px solid #c032f0;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+main .movieContainer {
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   background-color: #FAF9F6;
   border: 1px solid #c032f0;
-  width: 75%;
 }
 
 main .movieContainer h2 {
@@ -195,10 +243,25 @@ main .movieContainer h2 {
   font-weight: 900;
 }
 
+main .movieContainer .title {
+  margin: 2rem;
+}
+
+main .movieContainer .movieCardContainers {
+  width: 75%;
+}
+
+main .movieContainer .movieCardContainers .sec {
+  border: solid 1px #c032f0;
+}
+
 main .movieContainer .bar {
   background-color: #c6fa74;
   border-bottom: 1px solid #c032f0;
   padding: 2ex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 main .movieContainer .movies {
