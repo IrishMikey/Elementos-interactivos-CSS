@@ -66,13 +66,22 @@ function showMovies() {
 var movieTitleBar = Array.from(document.getElementsByClassName("bar"));
 movieTitleBar.forEach((bar) => {
   bar.addEventListener("click", () => {
-    if (bar.nextElementSibling.style.display == "flex") {
-      bar.nextElementSibling.style.display = "none";
+    closeAll(movieTitleBar);
+    if (bar.nextElementSibling.style.height == "") {
+      console.log(bar.nextElementSibling.style.height + "oops");
+
+      bar.nextElementSibling.style.height = "400px";
     } else {
-      bar.nextElementSibling.style.display = "flex";
-      console.log(bar.nextElementSibling.style.display);
+      console.log(bar.nextElementSibling.style.height + " else");
+
+      bar.nextElementSibling.style.height = "";
     }
 
   });
 });
-console.log(movieTitleBar);
+
+function closeAll(bars) {
+  bars.forEach(bar => {
+    bar.nextElementSibling.style.height = "";
+  });
+}

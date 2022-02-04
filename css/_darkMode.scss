@@ -27,11 +27,27 @@
         background-image: url("../img/bg-dark.png");
         aside {
             @include darkDefaults;
+            border-color: #{$primaryDark};
+
             ul {
                 a {
                     color: #{$colorTextDark};
                     &:hover {
                         color: #{$primaryDark};
+                    }
+                }
+            }
+        }
+        .movieContainer {
+            border-color: #{$primaryDark};
+            .movieCardContainers {
+                .sec {
+                    border-color: #{$primaryDark};
+                    .bar,
+                    .movies {
+                        border-color: #{$primaryDark};
+
+                        background-color: #{$secondaryDark};
                     }
                 }
             }
